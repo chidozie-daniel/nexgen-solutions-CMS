@@ -1,0 +1,48 @@
+# Environment Configuration
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+.project
+.classpath
+
+# Dependencies
+vendor/
+composer.lock
+node_modules/
+
+# Uploads and temporary files
+uploads/*
+!uploads/.gitkeep
+temp/
+tmp/
+cache/
+
+# Logs
+*.log
+error_log
+
+# Database
+*.sql.bak
+backup/
+
+# Session files
+sessions/
+.sessions/
+
+# Testing
+test_phase1.php
+test_email_config.php
+test_email_cli.php
+check_db.php
+check_settings.php

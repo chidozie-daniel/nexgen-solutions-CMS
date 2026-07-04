@@ -1,0 +1,23 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Block direct web access to internal PHP includes/config (they should only be loaded via require/include)
+RewriteRule ^(includes|config)/ - [F,L]
+</IfModule>
+
+# Protect common sensitive file types
+<IfModule mod_authz_core.c>
+  <FilesMatch "\.(sql|ini|log|env)$">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+<IfModule !mod_authz_core.c>
+  <FilesMatch "\.(sql|ini|log|env)$">
+    Order allow,deny
+    Deny from all
+  </FilesMatch>
+</IfModule>
+
+

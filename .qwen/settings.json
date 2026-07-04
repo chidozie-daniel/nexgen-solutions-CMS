@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php *)",
+      "Bash(mysql *)",
+      "Bash(c:\\xampp\\mysql\\bin\\mysqld *)",
+      "Bash(timeout *)",
+      "Bash(c:\\xampp\\mysql_start.bat)",
+      "Bash(sc *)",
+      "Bash(net *)",
+      "Bash(tasklist)",
+      "Bash(findstr *)",
+      "Bash(netstat *)",
+      "Bash(type *)",
+      "Bash(dir *)",
+      "Bash(start *)"
+    ]
+  },
+  "$version": 3
+}

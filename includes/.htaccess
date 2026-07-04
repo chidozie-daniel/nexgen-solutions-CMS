@@ -1,0 +1,15 @@
+# Prevent direct access to include files
+# This adds an extra layer of security beyond PHP checks
+
+# Deny access to all PHP files in this directory
+<FilesMatch "\.php$">
+    Require all denied
+</FilesMatch>
+
+# Allow access to non-PHP files (if any)
+<FilesMatch "\.(css|js|png|jpg|gif|svg|ico)$">
+    Require all granted
+</FilesMatch>
+
+# Hide from directory listing
+Options -Indexes
